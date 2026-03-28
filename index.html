@@ -39,14 +39,52 @@ body {
 .nav {
   display:flex;
   justify-content:space-between;
+  align-items: center;
   margin-bottom:30px;
+  position: relative;
 }
 
-.nav a {
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
   color:var(--subtext);
   text-decoration:none;
   margin-left:15px;
   font-size:0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 101;
+}
+
+.menu-icon span {
+  width: 28px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .hero {
@@ -177,6 +215,31 @@ body {
   .features {
     grid-template-columns:1fr;
   }
+  .menu-icon {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: var(--card-bg);
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 100;
+    border: 1px solid var(--border);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links a {
+    margin: 10px 0;
+    margin-left: 0;
+    font-size: 1rem;
+  }
 }
 </style>
 </head>
@@ -187,8 +250,15 @@ body {
 
 <!-- NAV -->
 <div class="nav">
-  <div style="font-weight:600;">Arcade Runner</div>
-  <div>
+  <div style="font-weight:600; z-index: 101;">Arcade Runner</div>
+  
+  <div class="menu-icon" id="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-links" id="nav-links">
     <a href="delete.html">Delete Account</a>
     <a href="privacy_policy.html">Privacy Policy</a>
     <a href="terms_and_conditions.html">Terms & Conditions</a>
@@ -278,6 +348,16 @@ body {
 </div>
 
 </div>
+
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.getElementById('nav-links');
+
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('open');
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
