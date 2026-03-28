@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Account - Arcade Runner</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --text: #111827;
+      --subtext: #6b7280;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+      --danger: #ef4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: var(--subtext);
+      font-size: 1rem;
+    }
+
+    /* Warning */
+    .warning {
+      background: #fef2f2;
+      color: var(--danger);
+      border: 1px solid #fecaca;
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--subtext);
+    }
+
+    p {
+      color: var(--subtext);
+    }
+
+    .email {
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--subtext);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Delete Your Arcade Runner Account</h1>
+      <p>Learn how to permanently delete your account and associated data.</p>
+    </div>
+
+    <!-- Warning -->
+    <div class="warning">
+      ⚠️ Account deletion is permanent and cannot be undone.
+    </div>
+
+    <!-- Section 1 -->
+    <div class="card">
+      <h2><span class="icon">🧭</span> How to Delete Your Account</h2>
+      <ul>
+        <li>Open the Arcade Runner app</li>
+        <li>Navigate to Profile or Settings</li>
+        <li>Tap on "Delete Account"</li>
+        <li>Confirm deletion</li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="card">
+      <h2><span class="icon">🗑️</span> What Data Gets Deleted</h2>
+      <ul>
+        <li>Name and profile information</li>
+        <li>Email address (Google Sign-In via Firebase Authentication)</li>
+        <li>App usage data associated with the account</li>
+      </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="card">
+      <h2><span class="icon">⏳</span> Data Retention Policy</h2>
+      <ul>
+        <li>Some system logs may be retained for up to 30 days for security and fraud prevention</li>
+        <li>No personally identifiable data is stored after deletion beyond this period</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="card">
+      <h2><span class="icon">📩</span> Can't Access the App?</h2>
+      <p>
+        You can request account deletion by contacting:
+        <br><br>
+        <span class="email">apptechlab.india@gmail.com</span>
+      </p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="card">
+      <h2><span class="icon">👨‍💻</span> Developer Information</h2>
+      <p><strong>Developer:</strong> ApptechLab</p>
+      <p><strong>App Name:</strong> Arcade Runner</p>
+    </div>
+
+    <div class="card">
+      <h2>📩 Contact Us</h2>
+      <p>Don't hesitate to contact us if you have any questions, contact us at:</p>
+      <p><a href="mailto:apptechlab.india@gmail.com">apptechlab.india@gmail.com</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+  <a href="terms_and_conditions.html" style="color:#6366f1; text-decoration:none; font-weight:500;">
+    Terms & Conditions
+  </a>
+  <br><br>
+  <a href="privacy_policy.html" style="color:#6366f1; text-decoration:none; font-weight:500;">
+    Privacy Policy
+  </a>
+  <br><br>
+  <div class="footer">
+  © 2026 Arcade Runner • Built by <a href="terms_and_conditions.html" style="color:#6366f1; text-decoration:none; font-weight:500;">Apptechlab</a> 
+</div>
+</footer>
+  </div>
+</body>
+</html>
